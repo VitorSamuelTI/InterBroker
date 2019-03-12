@@ -8,13 +8,16 @@
 #include<pthread.h> //for threading , link with lpthread
 
 
+
+
 //the thread function
-void *connection_handler(void *);
+char *connection_handler(void *);
 
 #define PORT 5555
 
-int listen_entry()
+char* listen_entry()
 {
+	char *message;
 	int socket_desc, client_sock, c, *new_sock;
 	struct sockaddr_in server, client;
 
@@ -30,13 +33,13 @@ int listen_entry()
 	server.sin_family = AF_INET;
 	server.sin_addr.s_addr = INADDR_ANY;
 	server.sin_port = htons(PORT);
-
+	
 	//Bind
 	if (bind(socket_desc, (struct sockaddr *)&server, sizeof(server)) < 0)
 	{
 		//print the error message
 		perror("bind failed. Error");
-		return 1;
+		return "error";
 	}
 	puts("bind done");
 
@@ -47,7 +50,7 @@ int listen_entry()
 	puts("Waiting for incoming connections...");
 	c = sizeof(struct sockaddr_in);
 
-
+	
 	//Accept and incoming connection
 	puts("Waiting for incoming connections...");
 	c = sizeof(struct sockaddr_in);
@@ -63,11 +66,13 @@ int listen_entry()
 		{
 			perror("could not create thread");
 			return 1;
-		}
+		}		
+		xmlProcess(connection_handler);
 
 		//Now join the thread , so that we dont terminate before the thread
 		//pthread_join( sniffer_thread , NULL);
 		puts("Handler assigned");
+		
 	}
 
 	if (client_sock < 0)
@@ -82,7 +87,7 @@ int listen_entry()
 /*
  * This will handle connection for each client
  * */
-void *connection_handler(void *socket_desc)
+char *connection_handler(void *socket_desc)
 {
 	//Get the socket descriptor
 	int sock = *(int*)socket_desc;
@@ -127,5 +132,5 @@ void *connection_handler(void *socket_desc)
 	//Free the socket pointer
 	free(socket_desc);
 
-	return 0;
+	return client_message;
 }

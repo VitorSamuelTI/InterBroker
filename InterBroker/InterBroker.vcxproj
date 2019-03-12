@@ -76,6 +76,7 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="process.cpp" />
     <ClCompile Include="tcp\listener.c" />
     <ClCompile Include="tcp\server.c" />
   </ItemGroup>

@@ -8,9 +8,13 @@ extern "C" {
 
 int main()
 {
+	char* message;
+
     printf("Starting!!\n");
 
-	listen_entry();
+	message = listen_entry();
+
+	printf(message);
 	
     return 0;
 }

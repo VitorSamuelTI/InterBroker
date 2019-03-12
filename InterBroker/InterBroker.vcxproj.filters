@@ -12,10 +12,13 @@
     <ClCompile Include="tcp\listener.c">
       <Filter>tcp</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="tcp\server.c">
       <Filter>tcp</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="process.cpp">
+      <Filter>xmlprocessor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tcp\listener.h">

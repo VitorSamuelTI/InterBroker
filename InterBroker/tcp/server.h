@@ -3,9 +3,9 @@
 #ifndef SERVER_H 
 #define SERVER_H
 
-void *connection_handler(void *);
+char *connection_handler(void *);
 
-int listen_entry();
+char* listen_entry();
 
 
 #endif
