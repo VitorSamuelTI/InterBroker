@@ -92,9 +92,7 @@
     <Link>
       <AdditionalOptions>-pthread %(AdditionalOptions)</AdditionalOptions>
     </Link>
-    <ClCompile>
-      <AdditionalOptions>-lxml -I/usr/include/libxml2/libxml %(AdditionalOptions)</AdditionalOptions>
-    </ClCompile>
+    <ClCompile />
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
