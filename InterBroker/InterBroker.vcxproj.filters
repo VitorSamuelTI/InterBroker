@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="xmlprocessor">
+      <UniqueIdentifier>{354ac5b6-43d1-4302-8fa9-302a08e1159d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tcp">
+      <UniqueIdentifier>{a68bbef0-a6c2-4c90-a6e4-b4856fa0dc44}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="xmlprocessor\ezxml.c">
+      <Filter>xmlprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlprocessor\xml_processor.c">
+      <Filter>xmlprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="tcp\listener.c">
+      <Filter>tcp</Filter>
+    </ClCompile>
+    <ClCompile Include="tcp\server.c">
+      <Filter>tcp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xmlprocessor\ezxml.h">
+      <Filter>xmlprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="tcp\listener.h">
+      <Filter>tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="tcp\server.h">
+      <Filter>tcp</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
