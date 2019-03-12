@@ -25,3 +25,8 @@ $ sudo ssh-keygen -A
 $ sudo service ssh start
 
 OBS: Sempre que iniciar o Linux deverá iniciar o serviço para conectar-se.
+
+------------------------------------------------------------------------------------------------
+## Instalar interpretador XML:
+
+sudo apt-get install libxml2-dev
