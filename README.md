@@ -8,6 +8,8 @@ $ sudo apt install -y build-essential
 
 $ sudo apt install -y gdbserver
 
+$ sudo apt install -y gdb
+
 ## Habilitar SSH Server:
 
 $ sudo apt install -y openssh-server
@@ -29,4 +31,4 @@ OBS: Sempre que iniciar o Linux deverá iniciar o serviço para conectar-se.
 ------------------------------------------------------------------------------------------------
 ## Instalar interpretador XML:
 
-sudo apt-get install libxml2-dev
+$ sudo apt-get install libxml2-dev
