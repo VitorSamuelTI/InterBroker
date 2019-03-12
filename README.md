@@ -29,6 +29,6 @@ $ sudo service ssh start
 OBS: Sempre que iniciar o Linux deverá iniciar o serviço para conectar-se.
 
 ------------------------------------------------------------------------------------------------
-## Instalar interpretador XML:
+## Linker command Line
 
-$ sudo apt-get install libxml2-dev
+-pthread
