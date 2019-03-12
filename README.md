@@ -1,5 +1,7 @@
 # InterBroker
 
+Projeto em C/C++ para conexão CP, processamento XML, gerenciamento de filas e gerenciamento de arquivos.
+
 ## Habilitar ubuntu para build:
 
 $ sudo apt install -y build-essential
