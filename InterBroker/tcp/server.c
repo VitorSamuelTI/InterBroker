@@ -7,6 +7,7 @@
 #include<unistd.h>	//write
 #include<pthread.h> //for threading , link with lpthread
 
+
 //the thread function
 void *connection_handler(void *);
 
@@ -86,26 +87,32 @@ void *connection_handler(void *socket_desc)
 	//Get the socket descriptor
 	int sock = *(int*)socket_desc;
 	long int read_size;
-	char *message, client_message[2000];
+	char *message;
+	unsigned char client_message[2000];
 
 	//Send some messages to the client
 	message = "InterBroker Connection Handler Start!!!\n";
 	write(sock, message, strlen(message));
 
-	//message = "Now type something and i shall repeat what you type \n";
-	//write(sock, message, strlen(message));
-
+	//Open File Stream
+	FILE *write_ptr;
+	write_ptr = fopen("/home/vitor/log.log", "a");
+	
 	//Receive a message from client
 	while ((read_size = recv(sock, client_message, 2000, 0)) > 0)
 	{
 		//Here start the message treatment implementation
-
-
-
-
+		
+		//write to file (will be log implementation)		
+		fwrite(client_message, strlen(client_message), 1, write_ptr);
+			   
 		//Send the message back to client
 		write(sock, client_message, strlen(client_message));
 	}
+
+	//Close File Stream
+	fclose(write_ptr);
+	
 
 	if (read_size == 0)
 	{

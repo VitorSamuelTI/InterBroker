@@ -9,28 +9,32 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="xmlprocessor\ezxml.c">
-      <Filter>xmlprocessor</Filter>
-    </ClCompile>
-    <ClCompile Include="xmlprocessor\xml_processor.c">
-      <Filter>xmlprocessor</Filter>
-    </ClCompile>
     <ClCompile Include="tcp\listener.c">
       <Filter>tcp</Filter>
     </ClCompile>
     <ClCompile Include="tcp\server.c">
       <Filter>tcp</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="xmlprocessor\ezxml.h">
-      <Filter>xmlprocessor</Filter>
-    </ClInclude>
     <ClInclude Include="tcp\listener.h">
       <Filter>tcp</Filter>
     </ClInclude>
     <ClInclude Include="tcp\server.h">
       <Filter>tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlprocessor\rapidxml.hpp">
+      <Filter>xmlprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlprocessor\rapidxml_iterators.hpp">
+      <Filter>xmlprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlprocessor\rapidxml_print.hpp">
+      <Filter>xmlprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlprocessor\rapidxml_utils.hpp">
+      <Filter>xmlprocessor</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

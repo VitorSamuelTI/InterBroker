@@ -78,15 +78,24 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tcp\listener.c" />
     <ClCompile Include="tcp\server.c" />
-    <ClCompile Include="xmlprocessor\ezxml.c" />
-    <ClCompile Include="xmlprocessor\xml_processor.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tcp\listener.h" />
     <ClInclude Include="tcp\server.h" />
-    <ClInclude Include="xmlprocessor\ezxml.h" />
+    <ClInclude Include="xmlprocessor\rapidxml.hpp" />
+    <ClInclude Include="xmlprocessor\rapidxml_iterators.hpp" />
+    <ClInclude Include="xmlprocessor\rapidxml_print.hpp" />
+    <ClInclude Include="xmlprocessor\rapidxml_utils.hpp" />
   </ItemGroup>
-  <ItemDefinitionGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile />
+    <Link>
+      <AdditionalOptions>-pthread %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ClCompile>
+      <AdditionalOptions>-lxml -I/usr/include/libxml2/libxml %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
 </Project>
