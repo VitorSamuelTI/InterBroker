@@ -66,8 +66,7 @@ char* listen_entry()
 		{
 			perror("could not create thread");
 			return 1;
-		}		
-		xmlProcess(connection_handler);
+		}
 
 		//Now join the thread , so that we dont terminate before the thread
 		//pthread_join( sniffer_thread , NULL);
@@ -107,13 +106,16 @@ char *connection_handler(void *socket_desc)
 	while ((read_size = recv(sock, client_message, 2000, 0)) > 0)
 	{
 		//Here start the message treatment implementation
-		
+
 		//write to file (will be log implementation)		
-		fwrite(client_message, strlen(client_message), 1, write_ptr);
+		fwrite(client_message, strlen(client_message), 1, write_ptr);		
 			   
 		//Send the message back to client
 		write(sock, client_message, strlen(client_message));
 	}
+
+	//Process XML
+	xmlProcess(client_message);
 
 	//Close File Stream
 	fclose(write_ptr);

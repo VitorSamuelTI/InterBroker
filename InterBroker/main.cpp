@@ -13,8 +13,7 @@ int main()
     printf("Starting!!\n");
 
 	message = listen_entry();
-
-	printf(message);
+	
 	
     return 0;
 }
