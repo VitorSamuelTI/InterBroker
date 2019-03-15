@@ -7,6 +7,9 @@
     <Filter Include="tcp">
       <UniqueIdentifier>{a68bbef0-a6c2-4c90-a6e4-b4856fa0dc44}</UniqueIdentifier>
     </Filter>
+    <Filter Include="database">
+      <UniqueIdentifier>{3588379c-8ae7-463a-aa18-62cb97095d0a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tcp\listener.c">
@@ -18,6 +21,12 @@
     </ClCompile>
     <ClCompile Include="process.cpp">
       <Filter>xmlprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="database\lib_version.c">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\server_version.c">
+      <Filter>database</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
