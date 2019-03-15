@@ -31,7 +31,7 @@ OBS: Sempre que iniciar o Linux deverá iniciar o serviço para conectar-se.
 ------------------------------------------------------------------------------------------------
 ## Linker command Line
 
--pthread
+-pthread -pq
 
 ------------------------------------------------------------------------------------------------
 ## Instalar e configurar postgres
