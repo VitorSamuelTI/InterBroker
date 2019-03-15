@@ -32,3 +32,22 @@ OBS: Sempre que iniciar o Linux deverá iniciar o serviço para conectar-se.
 ## Linker command Line
 
 -pthread
+
+------------------------------------------------------------------------------------------------
+## Instalar e configurar postgres
+
+$ sudo apt-get install postgresql
+
+$ sudo apt-get install libpq-dev
+
+$ sudo service postgresql start
+
+$ sudo -u postgres psql postgres
+
+postgres=# \password postgres
+
+$ sudo -u postgres createuser vitor
+
+postgres=# ALTER USER vitor WITH password 'vitor123';
+
+$ sudo -u postgres createdb broker --owner vitor
