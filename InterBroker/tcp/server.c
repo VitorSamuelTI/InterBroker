@@ -10,6 +10,7 @@
 
 
 
+
 //the thread function
 char *connection_handler(void *);
 
@@ -106,7 +107,7 @@ char *connection_handler(void *socket_desc)
 	while ((read_size = recv(sock, client_message, 2000, 0)) > 0)
 	{
 		//Here start the message treatment implementation
-
+		
 		//write to file (will be log implementation)		
 		fwrite(client_message, strlen(client_message), 1, write_ptr);		
 			   

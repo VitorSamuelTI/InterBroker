@@ -22,10 +22,10 @@
     <ClCompile Include="process.cpp">
       <Filter>xmlprocessor</Filter>
     </ClCompile>
-    <ClCompile Include="database\lib_version.c">
+    <ClCompile Include="database\server_version.c">
       <Filter>database</Filter>
     </ClCompile>
-    <ClCompile Include="database\server_version.c">
+    <ClCompile Include="database\lib_version.c">
       <Filter>database</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,6 +47,12 @@
     </ClInclude>
     <ClInclude Include="xmlprocessor\rapidxml_utils.hpp">
       <Filter>xmlprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="database\lib_version.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\server_version.h">
+      <Filter>database</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
