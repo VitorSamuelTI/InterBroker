@@ -76,6 +76,12 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClCompile Include="database\lib_version.c" />
+    <ClCompile Include="database\metadata\column_headers.c" />
+    <ClCompile Include="database\operations\create_table.c" />
+    <ClCompile Include="database\operations\list_tables.c" />
+    <ClCompile Include="database\operations\multiple_rows.c" />
+    <ClCompile Include="database\operations\prepared_statement.c" />
+    <ClCompile Include="database\operations\query_version.c" />
     <ClCompile Include="database\server_version.c" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="process.cpp" />
