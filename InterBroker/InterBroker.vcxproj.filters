@@ -49,9 +49,6 @@
     <ClCompile Include="database\operations\prepared_statement.c">
       <Filter>database\operations</Filter>
     </ClCompile>
-    <ClCompile Include="database\operations\query_version.c">
-      <Filter>database\operations</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tcp\listener.h">
@@ -77,6 +74,21 @@
     </ClInclude>
     <ClInclude Include="database\server_version.h">
       <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\metadata\column_headers.h">
+      <Filter>database\metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="database\operations\create_table.h">
+      <Filter>database\operations</Filter>
+    </ClInclude>
+    <ClInclude Include="database\operations\list_tables.h">
+      <Filter>database\operations</Filter>
+    </ClInclude>
+    <ClInclude Include="database\operations\multiple_rows.h">
+      <Filter>database\operations</Filter>
+    </ClInclude>
+    <ClInclude Include="database\operations\prepared_statement.h">
+      <Filter>database\operations</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

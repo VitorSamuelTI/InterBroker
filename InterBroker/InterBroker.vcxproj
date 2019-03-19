@@ -81,7 +81,6 @@
     <ClCompile Include="database\operations\list_tables.c" />
     <ClCompile Include="database\operations\multiple_rows.c" />
     <ClCompile Include="database\operations\prepared_statement.c" />
-    <ClCompile Include="database\operations\query_version.c" />
     <ClCompile Include="database\server_version.c" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="process.cpp" />
@@ -90,6 +89,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="database\lib_version.h" />
+    <ClInclude Include="database\metadata\column_headers.h" />
+    <ClInclude Include="database\operations\create_table.h" />
+    <ClInclude Include="database\operations\list_tables.h" />
+    <ClInclude Include="database\operations\multiple_rows.h" />
+    <ClInclude Include="database\operations\prepared_statement.h" />
     <ClInclude Include="database\server_version.h" />
     <ClInclude Include="tcp\listener.h" />
     <ClInclude Include="tcp\server.h" />

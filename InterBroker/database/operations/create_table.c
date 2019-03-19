@@ -17,7 +17,7 @@ int create() {
         exit(1);
     }
 
-    PGresult *res = PQexec(conn, "DROP TABLE IF EXISTS Cars");
+    PGresult *res = PQexec(conn, "DROP TABLE IF EXISTS Entity");
     
     if (PQresultStatus(res) != PGRES_COMMAND_OK) {
         do_exit(conn, res);
@@ -25,8 +25,8 @@ int create() {
     
     PQclear(res);
     
-    res = PQexec(conn, "CREATE TABLE Cars(Id INTEGER PRIMARY KEY," \
-        "Name VARCHAR(20), Price INT)");
+    res = PQexec(conn, "CREATE TABLE Entity(Id INTEGER PRIMARY KEY," \
+        "Name VARCHAR(20), Version INT)");
         
     if (PQresultStatus(res) != PGRES_COMMAND_OK) {
         do_exit(conn, res); 
@@ -34,14 +34,14 @@ int create() {
     
     PQclear(res);
     
-    res = PQexec(conn, "INSERT INTO Cars VALUES(1,'Audi',52642)");
+    res = PQexec(conn, "INSERT INTO Entity VALUES(1,'Account',1)");
         
     if (PQresultStatus(res) != PGRES_COMMAND_OK) 
         do_exit(conn, res);     
     
     PQclear(res);    
     
-    res = PQexec(conn, "INSERT INTO Cars VALUES(2,'Mercedes',57127)");
+    res = PQexec(conn, "INSERT INTO Entity VALUES(2,'User',1)");
         
     if (PQresultStatus(res) != PGRES_COMMAND_OK) {
         do_exit(conn, res);   
@@ -49,7 +49,7 @@ int create() {
     
     PQclear(res);    
     
-    res = PQexec(conn, "INSERT INTO Cars VALUES(3,'Skoda',9000)");
+    /*res = PQexec(conn, "INSERT INTO Entity VALUES(3,'Skoda',1)");
         
     if (PQresultStatus(res) != PGRES_COMMAND_OK) {
         do_exit(conn, res);   
@@ -57,7 +57,7 @@ int create() {
     
     PQclear(res);  
     
-    res = PQexec(conn, "INSERT INTO Cars VALUES(4,'Volvo',29000)");
+    res = PQexec(conn, "INSERT INTO Entity VALUES(4,'Volvo',1)");
         
     if (PQresultStatus(res) != PGRES_COMMAND_OK) {
         do_exit(conn, res);   
@@ -65,7 +65,7 @@ int create() {
     
     PQclear(res);      
     
-    res = PQexec(conn, "INSERT INTO Cars VALUES(5,'Bentley',350000)");
+    res = PQexec(conn, "INSERT INTO Entity VALUES(5,'Bentley',1)");
         
     if (PQresultStatus(res) != PGRES_COMMAND_OK) {
         do_exit(conn, res);   
@@ -73,7 +73,7 @@ int create() {
     
     PQclear(res);  
     
-    res = PQexec(conn, "INSERT INTO Cars VALUES(6,'Citroen',21000)");
+    res = PQexec(conn, "INSERT INTO Entity VALUES(6,'Citroen',1)");
         
     if (PQresultStatus(res) != PGRES_COMMAND_OK) {
         do_exit(conn, res);   
@@ -81,7 +81,7 @@ int create() {
     
     PQclear(res);  
     
-    res = PQexec(conn, "INSERT INTO Cars VALUES(7,'Hummer',41400)");
+    res = PQexec(conn, "INSERT INTO Entity VALUES(7,'Hummer',1)");
         
     if (PQresultStatus(res) != PGRES_COMMAND_OK) {
         do_exit(conn, res);   
@@ -89,13 +89,13 @@ int create() {
     
     PQclear(res);  
     
-    res = PQexec(conn, "INSERT INTO Cars VALUES(8,'Volkswagen',21600)");
+    res = PQexec(conn, "INSERT INTO Entity VALUES(8,'Volkswagen',1)");
         
     if (PQresultStatus(res) != PGRES_COMMAND_OK) {
         do_exit(conn, res);   
     }
     
-    PQclear(res);  
+    PQclear(res);  */
     PQfinish(conn);
 
     return 0;
