@@ -51,3 +51,5 @@ $ sudo -u postgres createuser vitor
 postgres=# ALTER USER vitor WITH password 'vitor123';
 
 $ sudo -u postgres createdb broker --owner vitor
+
+OBS: exit postgres \q
