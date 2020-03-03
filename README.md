@@ -53,3 +53,8 @@ postgres=# ALTER USER vitor WITH password 'vitor123';
 $ sudo -u postgres createdb broker --owner vitor
 
 OBS: exit postgres \q
+
+------------------------------------------------------------------------------------------------
+## Instalar RapidXml en Ubuntu
+
+sudo apt install librapidxml-dev -y
