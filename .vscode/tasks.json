@@ -1,0 +1,52 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++ build active file",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-Wall",
+                "-g",                
+                "/home/vitor/InterBroker/InterBroker/main.cpp",
+                "/home/vitor/InterBroker/InterBroker/process.cpp",
+                "/home/vitor/InterBroker/InterBroker/tcp/listener.c",
+                "/home/vitor/InterBroker/InterBroker/tcp/listener.h",
+                "/home/vitor/InterBroker/InterBroker/tcp/server.h",
+                "/home/vitor/InterBroker/InterBroker/tcp/server.c",
+                "/home/vitor/InterBroker/InterBroker/database/lib_version.c",
+                "/home/vitor/InterBroker/InterBroker/database/lib_version.h",
+                "/home/vitor/InterBroker/InterBroker/database/server_version.c",
+                "/home/vitor/InterBroker/InterBroker/database/server_version.h",
+                "/home/vitor/InterBroker/InterBroker/database/metadata/column_headers.c",
+                "/home/vitor/InterBroker/InterBroker/database/metadata/column_headers.h",
+                "/home/vitor/InterBroker/InterBroker/database/operations/create_table.c",
+                "/home/vitor/InterBroker/InterBroker/database/operations/create_table.h",
+                "/home/vitor/InterBroker/InterBroker/database/operations/list_tables.c",
+                "/home/vitor/InterBroker/InterBroker/database/operations/list_tables.h",
+                "/home/vitor/InterBroker/InterBroker/database/operations/multiple_rows.c",
+                "/home/vitor/InterBroker/InterBroker/database/operations/multiple_rows.h",
+                "/home/vitor/InterBroker/InterBroker/database/operations/prepared_statement.c",
+                "/home/vitor/InterBroker/InterBroker/database/operations/prepared_statement.h",
+                "/home/vitor/InterBroker/InterBroker/xmlprocessor/rapidxml.hpp",                
+                "/home/vitor/InterBroker/InterBroker/xmlprocessor/rapidxml_print.hpp",
+                "/home/vitor/InterBroker/InterBroker/xmlprocessor/rapidxml_utils.hpp",
+                               
+                "-o",
+                "${fileDirname}/InterBroker",                
+                "-lpthread",
+                "-lm",
+                "-lpq",
+                "-lstdc++"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+        }
+        }
+    ],
+    "version": "2.0.0"
+}
