@@ -8,14 +8,16 @@
 #include <string>
 #include <map>
 
-//Database Libs
 
+//Service lib
+#include "service.cpp"
 //XML Processor libs
 #include "xmlprocessor/rapidxml.hpp"
 #include "xmlprocessor/rapidxml_utils.hpp"
 
 using namespace std;
 using namespace rapidxml;
+using namespace services;
 
 extern "C" int xmlProcess(char*);
 
@@ -54,6 +56,9 @@ int xmlProcess(char* message)
 		//cout << params[node -> name()];
       }
     }
+	Service serviceProcessor;
+
+	string test = serviceProcessor.mapProcess(params);
 
 	return 0;
 }
