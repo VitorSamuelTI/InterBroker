@@ -29,13 +29,13 @@
                 "/home/vitor/InterBroker/InterBroker/database/operations/prepared_statement.h",
                 "/home/vitor/InterBroker/InterBroker/xmlprocessor/rapidxml.hpp",                
                 "/home/vitor/InterBroker/InterBroker/xmlprocessor/rapidxml_print.hpp",
-                "/home/vitor/InterBroker/InterBroker/xmlprocessor/rapidxml_utils.hpp",
-                               
+                "/home/vitor/InterBroker/InterBroker/xmlprocessor/rapidxml_utils.hpp",                               
                 "-o",
                 "${fileDirname}/InterBroker",                
                 "-lpthread",
                 "-lm",
                 "-lpq",
+                "-lcurl",
                 "-lstdc++"
             ],
             "options": {
