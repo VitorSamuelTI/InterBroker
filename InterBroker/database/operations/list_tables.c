@@ -16,7 +16,7 @@ int list() {
     }
     
     PGresult *res = PQexec(conn, "SELECT table_name FROM information_schema.tables "
-                    "WHERE table_schema = 'public'");    
+                    "WHERE table_schema = 'broker'");    
     
     if (PQresultStatus(res) != PGRES_TUPLES_OK) {
 

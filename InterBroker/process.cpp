@@ -1,5 +1,3 @@
-#include "xmlprocessor/rapidxml.hpp"
-#include "xmlprocessor/rapidxml_utils.hpp"
 #include <stdio.h>
 #include <string.h>
 #include <iostream>
@@ -8,6 +6,13 @@
 #include <vector>
 #include <cstdlib>
 #include <string>
+#include <map>
+
+//Database Libs
+
+//XML Processor libs
+#include "xmlprocessor/rapidxml.hpp"
+#include "xmlprocessor/rapidxml_utils.hpp"
 
 using namespace std;
 using namespace rapidxml;
@@ -33,17 +38,20 @@ int xmlProcess(char* message)
 	//Get first attribute example
 	//string firstAttibure = doc.first_node()->first_attribute()->value();
 	//cout << "Att1: " << firstAttibure << endl;
-
+	
+	map<string, string> params;
+	//params["aaa"] = "test";
 
 	//Iteration Nodes Example
 	rapidxml::xml_node<>* node = doc.first_node();
 
 	for(node = node -> first_node(); node != NULL; node = node -> next_sibling()){
 
-      if(node->type() == node_element) //chek node type
+      if(node->type() == node_element) //check node type
       {
-        cout<<node -> name() <<" 's value is : "<<node->value() <<   endl; //get node value
-        
+        //cout<<node -> name() <<" 's value is : "<<node->value() <<   endl; //get node value
+        params[node -> name()] = node->value();;
+		//cout << params[node -> name()];
       }
     }
 

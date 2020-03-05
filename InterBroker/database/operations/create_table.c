@@ -33,7 +33,7 @@ int create() {
     }
     
     PQclear(res);
-    
+    /*
     res = PQexec(conn, "INSERT INTO Entity VALUES(1,'Account',1)");
         
     if (PQresultStatus(res) != PGRES_COMMAND_OK) 

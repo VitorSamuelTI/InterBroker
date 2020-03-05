@@ -13,7 +13,7 @@ int main()
 {
 	char* message;
 
-    printf("Starting!!\n");
+    printf("Starting InterBroker Server!!!\n");
 
 	//Database connection Test
 	//version();
