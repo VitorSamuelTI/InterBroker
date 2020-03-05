@@ -10,7 +10,6 @@
 #include <iterator>
 #include <algorithm>
 #include <curl/curl.h>
-#include <iostream>
 
 using namespace std;
 
@@ -25,6 +24,9 @@ public:
         // Create a map iterator and point to beginning of map
         map<string, string>::iterator it = params.begin();
 
+        stringstream ss;
+        string message;
+
         while (it != params.end())
         {
             // Accessing KEY from element pointed by it.
@@ -34,14 +36,18 @@ public:
             string count = it->second;
 
             cout << word << " :: " << count << endl;
+            ss << "<" << word << ">" << count << "</" << word << ">";
 
             // Increment the Iterator to point to next entry
             it++;
         }
-        postMessage("test");
+
+        message = ss.str();
+        cout << message;
+        postMessage(message);
     }
 
-    int postMessage(string test)
+    int postMessage(string message)
     {
 
         CURL *curl;
