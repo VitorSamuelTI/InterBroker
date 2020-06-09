@@ -28,7 +28,7 @@ char* listen_entry()
 	{
 		printf("Could not create socket");
 	}
-	puts("Socket created");
+	puts("Socket created!!!");
 
 	//Prepare the sockaddr_in structure
 	server.sin_family = AF_INET;
@@ -42,15 +42,11 @@ char* listen_entry()
 		perror("bind failed. Error");
 		return "error";
 	}
-	puts("bind done");
+	puts("Bind done!!!");
 
 	//Listen
 	listen(socket_desc, 3);
-
-	//Accept and incoming connection
-	puts("Waiting for incoming connections...");
-	c = sizeof(struct sockaddr_in);
-
+	
 	
 	//Accept and incoming connection
 	puts("Waiting for incoming connections...");
